@@ -1,38 +1,56 @@
-.App {
+/* app.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('/Users/danielt/taskforwyze/mcdonalds-background-lklrppjq458ohbfj.jpg');
+  background-size: cover; /* Cover the entire viewport */
+}
+
+.container {
+  width: 800px; /* Adjust the width as needed */
+  height: 800px; /* Adjust the height as needed */
+  overflow: auto; /* Add scrollbar if content overflows */
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 1.5rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.table th,
+.table td {
+  padding: 0.75rem;
+  border: 2px solid #000000;
+}
+
+.table th {
+  background-color: #edf2f7;
   text-align: center;
+  font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.table td {
+  background-color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.table tr:nth-child(even) td {
+  background-color: #f7fafc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes glow {
+  0% { color: rgb(255, 140, 0); }
+  50% { color: rgb(230, 0, 0); }
+  100% { color: rgb(255, 140, 0); }
 }
